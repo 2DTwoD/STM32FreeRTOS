@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+".\objects\init.o"
+".\objects\main.o"
+".\objects\register_work.o"
+".\objects\led_task.o"
+".\objects\usart_task.o"
+".\objects\croutine.o"
+".\objects\event_groups.o"
+".\objects\heap_4.o"
+".\objects\list.o"
+".\objects\queue.o"
+".\objects\stream_buffer.o"
+".\objects\tasks.o"
+".\objects\timers.o"
+".\objects\port.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\freeRTOS.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\freeRTOS.map" -o .\Objects\freeRTOS.axf
